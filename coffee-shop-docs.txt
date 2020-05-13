@@ -6,3 +6,17 @@ Tech Stack:  Gatsby, React e-commerce snipcart, Contentful, Formspree, Netlify, 
 
 - Install Gatsby globally & gatsby new coffee-shop  OR npx gatsby new coffee-shop
 - gatsby develop -> localhost:8000
+
+2. Plugins 
+
+-> gatsby-plugin-manifest (change favicon) -> plugin for manifest.json
+-> gatsby-plugin-offline  -> plugin enables Progressive Web App + Offline functionality
+
+3. Iconfinder
+
+4. Add bootstrap
+
+5. React icons
+-> yarn add react-icons
+
+6. Git, Github, Netlify -> continuous deployment
