@@ -30,3 +30,39 @@ Tech Stack:  Gatsby, React e-commerce snipcart, Contentful, Formspree, Netlify, 
 -> create a global component BackgroundSection.js
 
 -> default props
+
+9. Footer, About, Menu components
+
+10. Contentful
+-> free tier -> 2 spaces(databases) ->  5000 records
+
+11. Connect Gatsby to Contentful
+-> yarn add gatsby-source-contentful
+-> gatsby-config.js => {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `your_space_id`,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      },
+    },
+-> Contentful -> Settings -> Api keys
+-> You don't want to share your API keys in the github
+-> Use environment variables
+-> create .env.development -> .gitignore 
+-> gatsby-config.js => require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+-> dotenv package is already installed
+
+12. Create build variables on Netlify
+-> Netlify -> Site settings -> Build & deploy -> Build environment variables
+
+13.GraphQL
+
+14. Filter categories
+
+new Set() -> get the unique values
+
+15. Contact
+
+-> add formspree service -> send contact form information to your email
