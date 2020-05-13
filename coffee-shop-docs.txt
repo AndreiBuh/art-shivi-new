@@ -22,3 +22,11 @@ Tech Stack:  Gatsby, React e-commerce snipcart, Contentful, Formspree, Netlify, 
 6. Git, Github, Netlify -> continuous deployment
 
 7. Navbar component
+
+8. Hero component with Gatsby Background Image plugin
+-> yarn add gatsby-background-image
+-> verify if you have these plugins installed: 
+       => yarn add gatsby-transformer-sharp gatsby-plugin-sharp gatsby-source-filesystem
+-> create a global component BackgroundSection.js
+
+-> default props
