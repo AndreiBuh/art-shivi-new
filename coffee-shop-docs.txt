@@ -1,0 +1,8 @@
+Coffee Shop Project
+
+Tech Stack:  Gatsby, React e-commerce snipcart, Contentful, Formspree, Netlify, Bootstrap
+
+1. Project Setup
+
+- Install Gatsby globally & gatsby new coffee-shop  OR npx gatsby new coffee-shop
+- gatsby develop -> localhost:8000
