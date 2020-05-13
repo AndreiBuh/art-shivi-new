@@ -1,4 +1,4 @@
-Coffee Shop Project
+================================= Coffee Shop Project ===============================================
 
 Tech Stack:  Gatsby, React e-commerce snipcart, Contentful, Formspree, Netlify, Bootstrap
 
@@ -20,3 +20,5 @@ Tech Stack:  Gatsby, React e-commerce snipcart, Contentful, Formspree, Netlify, 
 -> yarn add react-icons
 
 6. Git, Github, Netlify -> continuous deployment
+
+7. Navbar component
