@@ -54,7 +54,7 @@ const Navbar = () => {
           </div>
         </Link>
         <Link fade to="/">
-          <div className="m-3 m-sm-4">
+          <div className="m-3 m-sm-4 snipcart-checkout">
             <img src={shop} alt="shop" className={styles.cartImage} />
           </div>
         </Link>
