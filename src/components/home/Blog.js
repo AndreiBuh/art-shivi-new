@@ -3,11 +3,11 @@ import { Link } from "gatsby"
 
 import Title from "../global/Title"
 
-const Info = () => {
+const Blog = () => {
   return (
-    <section className="p-5">
+    <section className="p-5" style={{ background: "#fff4f3" }} id="blog">
       <div className="container">
-        <Title title="our story" />
+        <Title title="Blog" />
         <div className="row">
           <div className="col-10 col-sm-8 mx-auto text-center">
             <p className="lead text-muted mb-5">
@@ -31,4 +31,4 @@ const Info = () => {
   )
 }
 
-export default Info
+export default Blog

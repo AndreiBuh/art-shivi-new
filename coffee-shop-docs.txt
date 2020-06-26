@@ -7,7 +7,7 @@ Tech Stack:  Gatsby, React e-commerce snipcart, Contentful, Formspree, Netlify, 
 - Install Gatsby globally & gatsby new coffee-shop  OR npx gatsby new coffee-shop
 - gatsby develop -> localhost:8000
 
-2. Plugins 
+2. Plugins
 
 -> gatsby-plugin-manifest (change favicon) -> plugin for manifest.json
 -> gatsby-plugin-offline  -> plugin enables Progressive Web App + Offline functionality
@@ -25,7 +25,7 @@ Tech Stack:  Gatsby, React e-commerce snipcart, Contentful, Formspree, Netlify, 
 
 8. Hero component with Gatsby Background Image plugin
 -> yarn add gatsby-background-image
--> verify if you have these plugins installed: 
+-> verify if you have these plugins installed:
        => yarn add gatsby-transformer-sharp gatsby-plugin-sharp gatsby-source-filesystem
 -> create a global component BackgroundSection.js
 
@@ -48,7 +48,7 @@ Tech Stack:  Gatsby, React e-commerce snipcart, Contentful, Formspree, Netlify, 
 -> Contentful -> Settings -> Api keys
 -> You don't want to share your API keys in the github
 -> Use environment variables
--> create .env.development -> .gitignore 
+-> create .env.development -> .gitignore
 -> gatsby-config.js => require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
@@ -66,3 +66,12 @@ new Set() -> get the unique values
 15. Contact
 
 -> add formspree service -> send contact form information to your email
+
+16. snipcart
+
+-> full e-commerce platform service
+-> yarn add gatsby-plugin-snipcartv3
+-> snipcart api key
+-> for production paid tier
+-> 2% of sales or 10$
+-> environment variables to netlify

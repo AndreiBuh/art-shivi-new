@@ -3,9 +3,9 @@ require("dotenv").config({
 })
 module.exports = {
   siteMetadata: {
-    title: `Coffee Shop`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Art Shivi`,
+    description: `Art Shivi paint`,
+    author: `Andrei Buhus`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -23,18 +23,25 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
+    {
+      resolve: "gatsby-plugin-snipcartv3",
+      options: {
+        apiKey: process.env.SNIPCART_API_KEY,
+        autopop: true,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `art shivi`,
+        short_name: `art shivi`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/logo.svg`,
+        icon: `src/images/logo.jpg`,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

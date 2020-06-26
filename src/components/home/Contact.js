@@ -3,7 +3,7 @@ import Title from "../global/Title"
 
 const Contact = () => {
   return (
-    <section className="contact py-5">
+    <section className="contact py-5" id="contact">
       <Title title="Contact" />
       <div className="row">
         <div className="col-10 col-sm-8 col-md-6 mx-auto">

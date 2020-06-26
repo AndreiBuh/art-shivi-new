@@ -1,15 +1,18 @@
+@import url("https://fonts.googleapis.com/css?family=Poiret+One");
+
 :root {
-  --mainBrown: #2d1e1f;
-  --mainYellow: rgb(255, 158, 9);
+  --mainColor: #212322;
+  --secondColor: #e39284;
   --mainGrey: #ece8dc;
   --mainWhite: #fff;
-  --mainDark: #222;
+  --mainFont: "Poiret One";
 }
 
 body {
   background: var(--mainWhite);
-  color: var(--mainDark);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: var(--mainColor);
+  font-family: var(--mainFont), Verdana, Geneva, Tahoma, sans-serif;
+  overflow-x: hidden;
 }
 
 h1,
@@ -18,18 +21,10 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Courier New", Courier, monospace;
+  font-family: var(--mainFont), "Courier New", Courier, monospace;
   letter-spacing: 0.25rem;
 }
 
-.text-yellow {
-  color: var(--mainYellow);
-}
-.cart-icon {
-  cursor: pointer;
-  color: var(--mainYellow);
-  font-size: 2rem;
-}
 
 .default-background,
 .about-background {
@@ -60,7 +55,73 @@ h6 {
   background: var(--mainBrown);
 }
 
-.menu,
-.contact {
-  background: var(--mainGrey);
+
+
+/* Hamburger */
+
+.menu-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+}
+
+.menu-btn__burger {
+  width: 30px;
+  height: 3px;
+  background: var(--mainColor);
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+  transition: all .5s ease-in-out;
+}
+
+.menu-btn__burger::before,
+.menu-btn__burger::after  {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background: var(--mainColor);
+  border-radius: 5px;
+  box-shadow:  0 2px 5px rgba(255, 101, 47, .2);
+  transition: all .5s ease-in-out;
+}
+
+.menu-btn__burger::before {
+  transform: translateY(-10px);
+}
+
+.menu-btn__burger::after {
+  transform: translateY(10px);
+}
+
+.menu-btn.open .menu-btn__burger {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+}
+
+.menu-btn.open .menu-btn__burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+
+.menu-btn.open .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+
+.inside {
+  background: white;
+  padding: 20px 35px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 24px;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.inside:hover {
+  opacity: 0.8;
 }

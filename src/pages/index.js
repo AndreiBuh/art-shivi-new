@@ -1,38 +1,39 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
+import { Parallax } from "react-parallax"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import BackgroundSection from "../components/global/BackgroundSection"
-import Info from "../components/home/Info"
-import Menu from "../components/home/Menu"
+import Story from "../components/home/Story"
+import Shop from "../components/home/Shop"
+import Portofoliu from "../components/home/Portofoliu"
 import ProductList from "../components/home/ProductList"
+import Blog from "../components/home/Blog"
 import Contact from "../components/home/Contact"
+
+const image1 =
+  "https://images.pexels.com/photos/1548111/pexels-photo-1548111.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
 
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
-    <BackgroundSection
-      title="starbuck coffee"
-      image={data.homeImage.childImageSharp.fluid}
-      styleClass="default-background"
-    />
-    <Info />
-    <Menu coffeeItems={data.menu.nodes} />
+
+    <Parallax bgImage={image1} strength={500}>
+      <div style={{ height: 600 }}>
+        <div className="inside">Collection</div>
+      </div>
+    </Parallax>
+    <Story />
+    <Shop coffeeItems={data.menu.nodes} />
+    <Portofoliu />
     <ProductList />
+    <Blog />
     <Contact />
   </Layout>
 )
 
 export const query = graphql`
   {
-    homeImage: file(relativePath: { eq: "default-background.jpeg" }) {
-      childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid_tracedSVG
-        }
-      }
-    }
     menu: allContentfulCoffeeItem {
       nodes {
         title
