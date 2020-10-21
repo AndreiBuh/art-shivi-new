@@ -12,9 +12,6 @@ Tech Stack:  Gatsby, React e-commerce snipcart, Contentful, Formspree, Netlify, 
 -> gatsby-plugin-manifest (change favicon) -> plugin for manifest.json
 -> gatsby-plugin-offline  -> plugin enables Progressive Web App + Offline functionality
 
-3. Iconfinder
-
-4. Add bootstrap
 
 5. React icons
 -> yarn add react-icons

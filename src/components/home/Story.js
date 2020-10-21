@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 
 import Title from "../global/Title"
+import story from "../../assets/images/story.jpg"
 
 const Info = () => {
   return (
@@ -11,8 +12,8 @@ const Info = () => {
         <div className="row">
           <div className="col-md-7">
             <img
-              src="https://scontent.fotp3-2.fna.fbcdn.net/v/t31.0-8/p960x960/21167550_867834840033216_4403102724275606048_o.jpg?_nc_cat=100&_nc_sid=85a577&_nc_ohc=iKYwiQIW8K8AX-U0r3G&_nc_ht=scontent.fotp3-2.fna&_nc_tp=6&oh=b480ae2eaec8fb7fd21b9a6309654f9a&oe=5F1B4F93"
-              alt="poza"
+              src={story}
+              alt="story"
               width="100%"
             />
           </div>
@@ -25,19 +26,13 @@ const Info = () => {
                 marginLeft: "-400px",
               }}
             >
-              <h2>Art Shivi Paint</h2>
+              <h2>Pie Gourmet</h2>
             </div>
             <p
               className="lead text-muted font-weight-bold"
               style={{ letterSpacing: "1px" }}
             >
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Doloribus quasi qui delectus accusantium ab non, in sit ipsam
-              libero exercitationem excepturi iste architecto deleniti
-              blanditiis harum, iure minima tempora quod tenetur minus. Iure
-              eius voluptates explicabo similique molestiae beatae, odit enim
-              eligendi facere tempora vero dolores magnam fuga ab pariatur
-              nesciunt quos recusandae atque labore!
+              Since our humble start in 1987. We opened the doors to our current location in 1988 and have been proudly serving our homemade artisan pies and baked goods to thousands of customers we’ve come to know and love in our hometown of Vienna, VA!
             </p>
           </div>
         </div>

@@ -3,8 +3,8 @@ require("dotenv").config({
 })
 module.exports = {
   siteMetadata: {
-    title: `Art Shivi`,
-    description: `Art Shivi paint`,
+    title: `Pie Gourmet`,
+    description: `Pie Gourmet pies`,
     author: `Andrei Buhus`,
   },
   plugins: [
@@ -13,7 +13,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/src/assets/images`,
       },
     },
     {
@@ -35,13 +35,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `art shivi`,
-        short_name: `art shivi`,
+        name: `pie gourmet`,
+        short_name: `pie gourmet`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/logo.jpg`,
+        icon: `src/assets/images/logo.jpg`,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

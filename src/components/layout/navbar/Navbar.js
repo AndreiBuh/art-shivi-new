@@ -6,8 +6,8 @@ import { Link as ScrollLink, animateScroll as scroll } from "react-scroll"
 
 import socialIcons from "../../../constants/social-icons"
 import links from "../../../constants/links"
-import logo from "../../../images/logo.jpg"
-import shop from "../../../images/shop.svg"
+import logo from "../../../assets/images/logo.jpg"
+import shop from "../../../assets/images/shop.svg"
 
 import styles from "./navbar.module.css"
 
@@ -21,8 +21,21 @@ const Navbar = () => {
 
   return (
     <>
-      <div className={styles.navCenter} id="navbar">
-        <div className={`${styles.navSocialLinks} m-4`}>
+      <div className={styles.navCenter} id="navbar">     
+        <div className={styles.menuToggle}>
+          <div
+            className={`m-2 menu-btn navbar-toggler ${isOpen ? "open" : ""}`}
+            onClick={() => setIsOpen(true)}
+          >
+            <div className="menu-btn__burger navbar-toggler-icon"></div>
+          </div>
+        </div>
+        <Link fade to="/">
+          <div className={styles.logoHeader}>
+            <img src={logo} alt="logo" className={styles.logo} />
+          </div>
+        </Link>
+         <div className={`${styles.navSocialLinks} m-4`}>
           {socialIcons.map((item, index) => {
             return (
               <a
@@ -40,19 +53,7 @@ const Navbar = () => {
             )
           })}
         </div>
-        <div className={styles.menuToggle}>
-          <div
-            className={`m-2 menu-btn navbar-toggler ${isOpen ? "open" : ""}`}
-            onClick={() => setIsOpen(true)}
-          >
-            <div className="menu-btn__burger navbar-toggler-icon"></div>
-          </div>
-        </div>
-        <Link fade to="/">
-          <div className={styles.logoHeader}>
-            <img src={logo} alt="logo" className={styles.logo} />
-          </div>
-        </Link>
+        
         <Link fade to="/">
           <div className="m-3 m-sm-4 snipcart-checkout">
             <img src={shop} alt="shop" className={styles.cartImage} />

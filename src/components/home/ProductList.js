@@ -6,7 +6,7 @@ import Title from "../global/Title"
 
 const getProducts = graphql`
   {
-    products: allContentfulCoffeProduct {
+    products: allContentfulPies {
       nodes {
         id
         title

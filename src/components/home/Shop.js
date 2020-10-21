@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 import { Parallax } from "react-parallax"
 
 const image1 =
-  "https://images.pexels.com/photos/242236/pexels-photo-242236.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+  "https://images.pexels.com/photos/669734/pexels-photo-669734.jpeg?cs=srgb&dl=pexels-element-digital-669734.jpg&fm=jpg"
 
 const getCategories = items => {
   let tempItems = items.map(item => {
@@ -40,7 +40,7 @@ class Shop extends Component {
   render() {
     if (this.state.coffeeItems.length > 0) {
       return (
-        <Parallax bgImage={image1} strength={500}>
+        <Parallax  strength={500}>
           <div style={{ height: 800 }} id="shop">
             <section className="py-5 menu">
               <div className="container">
@@ -71,7 +71,7 @@ class Shop extends Component {
                         className="col-11 col-md-6 my-3 d-flex mx-auto"
                       >
                         <div>
-                          <Img fixed={item.image.fixed} />
+                          <Img fixed={item.image.fixed} className="rounded" />
                         </div>
                         <div className="flex-grow-1 px-3">
                           <div className="d-flex justify-content-between">

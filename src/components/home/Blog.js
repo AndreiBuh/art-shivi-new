@@ -19,11 +19,7 @@ const Blog = () => {
               eligendi facere tempora vero dolores magnam fuga ab pariatur
               nesciunt quos recusandae atque labore!
             </p>
-            <Link to="/about">
-              <button className="btn text-uppercase btn-yellow">
-                about page
-              </button>
-            </Link>
+           
           </div>
         </div>
       </div>

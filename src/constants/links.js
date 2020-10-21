@@ -1,15 +1,15 @@
 export default [
   {
-    path: "/Story",
-    text: "story",
+    path: "/home",
+    text: "home",
+  },
+  {
+    path: "/menu",
+    text: "menu",
   },
   {
     path: "/shop",
     text: "shop",
-  },
-  {
-    path: "/portofoliu",
-    text: "portofoliu",
   },
   {
     path: "/contact",

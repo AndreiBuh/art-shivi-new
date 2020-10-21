@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/css?family=Poiret+One");
+@import url("https://fonts.googleapis.com/css?family=Arvo");
 
 :root {
   --mainColor: #212322;
   --secondColor: #e39284;
   --mainGrey: #ece8dc;
   --mainWhite: #fff;
-  --mainFont: "Poiret One";
+  --mainFont: "Arvo";
 }
 
 body {
@@ -24,7 +24,6 @@ h6 {
   font-family: var(--mainFont), "Courier New", Courier, monospace;
   letter-spacing: 0.25rem;
 }
-
 
 .default-background,
 .about-background {
@@ -55,8 +54,6 @@ h6 {
   background: var(--mainBrown);
 }
 
-
-
 /* Hamburger */
 
 .menu-btn {
@@ -64,7 +61,7 @@ h6 {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .menu-btn__burger {
@@ -72,20 +69,20 @@ h6 {
   height: 3px;
   background: var(--mainColor);
   border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
-  transition: all .5s ease-in-out;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
 }
 
 .menu-btn__burger::before,
-.menu-btn__burger::after  {
-  content: '';
+.menu-btn__burger::after {
+  content: "";
   position: absolute;
   width: 30px;
   height: 3px;
   background: var(--mainColor);
   border-radius: 5px;
-  box-shadow:  0 2px 5px rgba(255, 101, 47, .2);
-  transition: all .5s ease-in-out;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
 }
 
 .menu-btn__burger::before {
@@ -116,7 +113,7 @@ h6 {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   font-size: 24px;
   letter-spacing: 2px;
   cursor: pointer;
@@ -124,4 +121,33 @@ h6 {
 
 .inside:hover {
   opacity: 0.8;
+}
+
+/* Scroll to top button */
+.back-to-top {
+  width: 3rem;
+  height: 3rem;
+  background-color: black;
+  position: fixed;
+  bottom: 4rem;
+  left: 90%;
+  border-radius: 20%;
+}
+
+.back-to-top div svg {
+  animation: up 2s infinite;
+}
+
+@keyframes up {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
 }

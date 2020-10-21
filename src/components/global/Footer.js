@@ -1,15 +1,24 @@
-import React from "react"
+import React, {useState, useEffect} from "react"
+import ScrollToTop from './ScrollToTop'
 
 const Footer = () => {
+  const [showScrollToTop, setShowScrollToTop] = useState(false)
+
+  useEffect(() => {
+    window.onscroll = function() {
+    window.pageYOffset > 1500 ? setShowScrollToTop(true) : setShowScrollToTop(false)
+  }}, [])
+
   return (
     <footer className="footer py-3">
       <div className="container">
         <div className="row">
-          <div className="col-10 mx-auto col-md-6 text-yellow text-center text-capitalize">
-            <h3> all rights reserved &copy; {new Date().getFullYear()}</h3>
-          </div>
+          <div className="col-12 mx-auto col-md-6 text-yellow text-center text-capitalize">
+            <h6> all rights reserved &copy; {new Date().getFullYear()} Pie Gourmet</h6>   
+            { showScrollToTop ? <ScrollToTop /> : null}
+          </div>         
         </div>
-      </div>
+      </div>  
     </footer>
   )
 }
