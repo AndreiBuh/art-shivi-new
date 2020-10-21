@@ -5,7 +5,7 @@ import hero from '../../assets/images/hero.jpg'
 const Hero = () => {
   return (
     <div>
-        <img src={hero} height="550"/>
+        <img src={hero} height="auto" width="100%"/>
     </div>
   )
 }
