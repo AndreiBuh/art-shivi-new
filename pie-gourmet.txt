@@ -72,3 +72,9 @@ new Set() -> get the unique values
 -> for production paid tier
 -> 2% of sales or 10$
 -> environment variables to netlify
+
+17. Tailwind
+
+npm install tailwindcss --save-dev
+npx tailwindcss init
+npm install postcss gatsby-plugin-postcss

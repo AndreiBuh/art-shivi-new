@@ -7,11 +7,11 @@ import Story from "../components/home/Story"
 import Shop from "../components/home/Shop"
 import ProductList from "../components/home/ProductList"
 import Blog from "../components/home/Blog"
-import Menu from "../components/home/Menu"
 import Hero from "../components/home/Hero"
 import Contact from "../components/home/Contact"
 import Image1 from "../components/home/Image1"
 import Image2 from "../components/home/Image2"
+import Image3 from "../components/home/Image3"
 
 
 
@@ -25,8 +25,7 @@ const IndexPage = ({ data }) => (
     <ProductList />
     <Image1 />
     <Blog />
-    <Menu />
-    <Image2 />
+    <Image3 />
     <Contact />
   </Layout>
 )

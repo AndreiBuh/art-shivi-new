@@ -14,7 +14,7 @@ const Footer = () => {
       <div className="container">
         <div className="row">
           <div className="col-12 mx-auto col-md-6 text-yellow text-center text-capitalize">
-            <h6> all rights reserved &copy; {new Date().getFullYear()} Pie Gourmet</h6>   
+            <h6> all rights reserved &copy; {new Date().getFullYear()} Art Shivi</h6>   
             { showScrollToTop ? <ScrollToTop /> : null}
           </div>         
         </div>

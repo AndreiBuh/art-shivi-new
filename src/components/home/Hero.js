@@ -1,11 +1,26 @@
 import React from 'react'
-
-import hero from '../../assets/images/hero.jpg'
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 
 const Hero = () => {
+  const data = useStaticQuery(graphql`
+  query {
+    file(relativePath: { eq: "hero.jpg" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+  }
+`)
+
   return (
     <div>
-        <img src={hero} height="auto" width="100%"/>
+       <Img
+            fluid={data.file.childImageSharp.fluid}
+            alt="Hero image"
+          />
     </div>
   )
 }

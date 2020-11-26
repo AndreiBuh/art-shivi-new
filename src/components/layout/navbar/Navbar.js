@@ -1,12 +1,13 @@
 import React, { useState } from "react"
 import { IconContext } from "react-icons"
-import { FaAlignRight, FaTimes } from "react-icons/fa"
+import { FaAlignRight } from "react-icons/fa"
 import { Link } from "gatsby"
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll"
 
 import socialIcons from "../../../constants/social-icons"
 import links from "../../../constants/links"
 import logo from "../../../assets/images/logo.jpg"
+import menu from "../../../assets/images/menu.svg"
 import shop from "../../../assets/images/shop.svg"
 
 import styles from "./navbar.module.css"
@@ -27,7 +28,7 @@ const Navbar = () => {
             className={`m-2 menu-btn navbar-toggler ${isOpen ? "open" : ""}`}
             onClick={() => setIsOpen(true)}
           >
-            <div className="menu-btn__burger navbar-toggler-icon"></div>
+            <img src={menu} alt="menu" className="menu-btn" />
           </div>
         </div>
         <Link fade to="/">
@@ -108,13 +109,13 @@ const Navbar = () => {
             }}
           >
             <div>
-              <FaTimes onClick={() => setIsOpen(!isOpen)} />
+              <img src={menu} alt="menu" className="menu-btn" onClick={() => setIsOpen(!isOpen)} />
             </div>
           </IconContext.Provider>
-          {links.map((link, index) => {
+          {links.map((link) => {
             return (
               <>
-                <li key={index} className={styles.navItem}>
+                <li key={link.id} className={styles.navItem}>          
                   <div className={styles.navSpan}>
                     <div>
                       <ScrollLink
@@ -128,6 +129,7 @@ const Navbar = () => {
                         delay={300}
                         isDynamic={true}
                         ignoreCancelEvents={false}
+                        
                       >
                         {link.text}
                       </ScrollLink>

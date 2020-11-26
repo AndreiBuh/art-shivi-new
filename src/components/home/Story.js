@@ -26,7 +26,7 @@ const Info = () => {
                 marginLeft: "-400px",
               }}
             >
-              <h2>Pie Gourmet</h2>
+              <h2>Art Shivi</h2>
             </div>
             <p
               className="lead text-muted font-weight-bold"

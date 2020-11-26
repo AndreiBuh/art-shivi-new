@@ -3,11 +3,12 @@ require("dotenv").config({
 })
 module.exports = {
   siteMetadata: {
-    title: `Pie Gourmet`,
-    description: `Pie Gourmet pies`,
-    author: `Andrei Buhus`,
+    title: `Art Shivi`,
+    description: `Art Shivi Paints`,
+    author: `@andreibuhus`,
   },
   plugins: [
+    `gatsby-plugin-postcss`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
